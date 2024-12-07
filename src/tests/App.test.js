@@ -1,7 +1,7 @@
 import { render, screen } from '@testing-library/react';
 import App from '../App';
 
-jest.mock('./components/Transactions', () => {
+jest.mock('../components/Transactions', () => {
   return () => <div>Transactions Component</div>;
 });
 
