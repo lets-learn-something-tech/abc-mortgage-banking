@@ -3,16 +3,21 @@ export const fetchTransactions = (fromAccount, toAccount) => {
     dispatch({ type: 'TRANSACTIONS_LOADING' });
 
     try {
-      const response = await fetch('http://localhost:5000/transactions');
-      const data = await response.json();
+      const url = new URL('http://localhost:5000/transactions');
+      const params = new URLSearchParams();
 
-      const filteredData = data.filter(
-        (transaction) => transaction.fromAccount === fromAccount && transaction.toAccount === toAccount
-      );
+      params.append('fromAccount', fromAccount);
+      params.append('toAccount', toAccount);
+      params.append('_limit', 5);
+      params.append('_sort', 'date');
+      params.append('_order', 'desc');
+
+      const response = await fetch(`${url}?${params.toString()}`);
+      const data = await response.json();
 
       dispatch({
         type: 'TRANSACTIONS_SUCCESS',
-        payload: filteredData,
+        payload: data,
       });
     } catch (error) {
       dispatch({
@@ -22,4 +27,3 @@ export const fetchTransactions = (fromAccount, toAccount) => {
     }
   };
 };
-
