@@ -1,0 +1,75 @@
+@import './colors';
+.table-container {
+  padding: 0;
+
+  input {
+    padding: 10px;
+    margin-bottom: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    font-size: 16px;
+  }
+}
+
+.react-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table-header {
+  background-color: #f4f4f4;
+  padding: 10px;
+  cursor: pointer;
+  text-align: left;
+}
+
+.table-cell {
+  padding: 8px;
+  border-bottom: 1px solid #ddd;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+  th {
+    background-color: $table-header-bg;
+    color: $table-header-color;
+    padding: 12px 15px;
+    text-align: left;
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  
+  td {
+    padding: 12px 15px;
+    font-size: 14px;
+    color: #555;
+    border-top: 1px solid $border-color;
+  }
+  
+  tr:hover {
+    background-color: $table-row-hover-bg;
+  }
+  
+  .loading, .error {
+    text-align: center;
+    font-size: 16px;
+    color: #888;
+    margin-top: 20px;
+  }
+  
+  .loading {
+    color: $primary-color;
+  }
+  
+  .error {
+    color: $error-color;
+    font-weight: bold;
+  }
+}
