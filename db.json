@@ -1,0 +1,47 @@
+{
+  "users": [
+    {
+      "userId": 1,
+      "customerId": "user123",
+      "password": "password123"
+    }
+  ],
+  "accounts": [
+    {
+      "accountId": 1,
+      "userId": 1,
+      "accountNumber": "1234567890",
+      "type": "savings",
+      "balance": 500000,
+      "lastTransactionDate": "2024-12-01"
+    },
+    {
+      "accountId": 2,
+      "userId": 1,
+      "accountNumber": "0987654321",
+      "type": "mortgage",
+      "balance": 100000,
+      "lastTransactionDate": "2024-11-25"
+    }
+  ],
+  "transactions": [
+    {
+      "transactionId": 1,
+      "userId": 1,
+      "fromAccount": 1234567890,
+      "toAccount": "0987654321",
+      "amount": 5000,
+      "remarks": " ",
+      "transactionDate": "2024-12-01"
+    },
+    {
+      "transactionId": 1,
+      "userId": 1,
+      "fromAccount": 1234567890,
+      "toAccount": "0987654321",
+      "amount": 5000,
+      "remarks": " ",
+      "transactionDate": "2024-12-01"
+    }
+  ]
+}
